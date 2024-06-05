@@ -1,4 +1,4 @@
 from .dbclient import (
-    NoRequiredDbParams,
+    NoRequiredVarEnv,
     SQLiteClient,
 )

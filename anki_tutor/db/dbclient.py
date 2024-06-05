@@ -10,8 +10,16 @@ from sqlite3 import (
 from typing import Any
 
 
-class NoRequiredDbParams(Exception):
-    """Exception raised when required database parameters are missing."""
+class NoRequiredVarEnv(Exception):
+    """Exception raised when required env vars are missing."""
+
+    def __init__(self, env_name: str) -> None:
+        self.msg = (
+            f"Script cannot find required environment variable {env_name}."
+        )
+
+    def __str__(self) -> str:
+        return self.msg
 
 
 class SQLiteClient:

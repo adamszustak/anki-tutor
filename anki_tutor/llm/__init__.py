@@ -1,9 +1,6 @@
 import os
 
-from .helper import (
-    BASE_DIR_FOR_SAVING,
-    NoRequiredAPIKey,
-)
+from .helper import BASE_DIR_FOR_SAVING
 from .sr import SpeechRecognizer
 from .stt import SpeechToText
 

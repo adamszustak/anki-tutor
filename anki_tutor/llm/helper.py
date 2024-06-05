@@ -9,7 +9,3 @@ class SoundWritingError(Exception):
 
 class TextWritingError(Exception):
     """Exception raised when error during saving text file"""
-
-
-class NoRequiredAPIKey(Exception):
-    """Exception raised when required API KEY parameter is missing."""
