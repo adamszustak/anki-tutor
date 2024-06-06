@@ -5,8 +5,8 @@ from typing import (
     Final,
 )
 
-import speech_recognition as sr  # type: ignore
-from openai import OpenAI  # type: ignore
+import speech_recognition as sr
+from openai import OpenAI
 from speech_recognition import (
     Microphone,
     Recognizer,

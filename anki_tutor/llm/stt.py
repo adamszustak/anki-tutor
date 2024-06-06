@@ -1,7 +1,7 @@
 from io import BytesIO
 from typing import Final
 
-from openai import OpenAI  # type: ignore
+from openai import OpenAI
 
 from .helper import (
     BASE_DIR_FOR_SAVING,
