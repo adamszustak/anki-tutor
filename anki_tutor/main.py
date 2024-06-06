@@ -1,11 +1,12 @@
 ### WIP ###
 import os
 
+from dotenv import load_dotenv
+
 from db import (
     NoRequiredVarEnv,
     SQLiteClient,
 )
-from dotenv import load_dotenv  # type: ignore
 from llm import (
     SpeechRecognizer,
     SpeechToText,
