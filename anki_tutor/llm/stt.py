@@ -15,7 +15,9 @@ class SpeechToText:
     def __init__(self, api_key: str) -> None:
         self.client: OpenAI = OpenAI(api_key=api_key)
 
-    def transcribe(self, audio: bytes, file_name_to_save: str | None) -> None:
+    def transcribe(
+        self, audio: bytes, file_name_to_save: str | None = None
+    ) -> str:
         audio_data = BytesIO(audio)
         audio_data.name = "SpeechRecognition_audio.wav"
         transcription: str = self.client.audio.transcriptions.create(
@@ -23,6 +25,7 @@ class SpeechToText:
         ).text
         if file_name_to_save:
             self._save_text_file(transcription, file_name_to_save)
+        return transcription
 
     def _save_text_file(self, content: str, file_name_to_save: str) -> None:
         try:
