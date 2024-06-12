@@ -1,11 +1,10 @@
 from __future__ import annotations
 
 from enum import (
-    Enum,
+    StrEnum,
     auto,
 )
 from typing import (
-    Any,
     Final,
     Iterator,
 )
@@ -21,11 +20,7 @@ class TextWritingError(Exception):
     """Exception raised when error during saving text file"""
 
 
-class WAKEUP_KEYWORDS(Enum):
-    @staticmethod
-    def _generate_next_value_(name: str, *args: Any) -> str:
-        return name.lower()
-
+class WAKEUP_KEYWORDS(StrEnum):
     SENTENCES = auto()
     NOTES = auto()
 
