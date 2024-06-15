@@ -4,10 +4,8 @@ import os
 
 from dotenv import load_dotenv
 
-from db import (
-    NoRequiredVarEnv,
-    SQLiteClient,
-)
+from db import SQLiteClient
+from exceptions import NoRequiredVarEnv
 from llm import (
     SpeechRecognizer,
     SpeechToText,
